@@ -89,10 +89,11 @@ str = str.Replace(",","");
 str = str.Replace("?","");
 str = str.Replace(":","");
 str = str.Replace("...","");
-str = str.Replace("-","");
+str = str.Replace("–","");
 str = str.Replace("(","");
 str = str.Replace(")","");
 str = str.Replace(";","");
+str = str.Replace("\n ","");
 for(int i = 0; i < str.Length; i++)
 {
     str = str.ToLower(); 
@@ -128,8 +129,8 @@ while(count < howManyWord)
         if(allWords[count]==allWords[i] && count!=i)
         {
             repeats++;
-            allWords[i] = " ";
-            allWords[i] = allWords[i].Replace(" ","");
+            allWords[i] = "NULL";
+            allWords[i] = allWords[i].Replace("NULL","");
         }
     }
     Console.WriteLine($"{repeats} раз встречается слово {allWords[count]}");
