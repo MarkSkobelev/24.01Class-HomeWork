@@ -4,21 +4,12 @@ void showWords(string str, int number, int indexForStr, int indexForNumber)
 {
     if(indexForNumber<number)
     {
-        if(indexForStr<str.Length)
-        {
-            Console.Write(str[indexForStr]);
-            showWords(str, number, indexForStr, indexForNumber+1);
-        }
-        Console.WriteLine();
-        Console.Write(indexForNumber);
-        if(indexForNumber==number-1)
-        {
-            if(indexForStr<str.Length)
-            {
-                Console.Write(str[indexForStr]);
-                showWords(str,number,indexForStr+1,indexForNumber);
-            }
-        }
+        Console.Write(str[indexForStr]);
+        showWords(str, number, indexForStr, indexForNumber+1);
+    }
+    if(indexForStr<str.Length-1)
+    {
+        showWords(str,number,indexForStr+1,indexForNumber);
     }
 }
 string alphabet = "аисв";
