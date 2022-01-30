@@ -16,4 +16,4 @@ double funcAkkerman(double m, double n)
         }
 }
 
-Console.WriteLine(funcAkkerman(4,3));
+Console.WriteLine(funcAkkerman(3,5));
