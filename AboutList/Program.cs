@@ -1,6 +1,6 @@
 ﻿// Переменная типа List
 
-void showList(List<int> myList)
+/*void showList(List<int> myList)
 {
     foreach (var item in myList)
     {
@@ -36,4 +36,28 @@ foreach (string word in words)
         numbersOfWords[word]++;
     }
 }
-showDictionary(numbersOfWords);
+showDictionary(numbersOfWords);*/
+void showList(List<double> ListForShow)
+{
+    foreach(var item in ListForShow)
+    {
+        Console.WriteLine(item);
+    }
+}
+List<double> doubleList = new List<double>();
+
+doubleList.Add(2.0);
+doubleList.Add(3.0);
+doubleList.Add(2.6);
+doubleList.Add(1.6);
+doubleList.AddRange(doubleList);
+
+int ListLength = doubleList.Count();
+for(int i = ListLength-1; i >=0 ; i--)
+{
+    if(doubleList[i] == 3)
+    {
+        doubleList.Remove(doubleList[i]);
+    }
+}
+showList(doubleList);
